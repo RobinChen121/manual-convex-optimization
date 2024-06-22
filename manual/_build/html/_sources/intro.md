@@ -1,10 +1,9 @@
 # Overview
 
-This is a manual of possible solutions to the exercises in the book `Introduction to Linear Optimization` (Dimitris Bertsimas and John N. Tsitsiklis, Athena Scientific, 1997). 
+This is my exercise book for the exercises in the book `Convex Optimization` (Boyd, Stephen P., and Lieven Vandenberghe. Cambridge university press, 2004). 
 
-Most of the solutions are collected from the internet and some are given by me. 
 
-```{image} images/cover.jpeg
+```{image} images/cover.jpg
 :alt: cover
 :class: bg-primary mb-1
 :width: 400px

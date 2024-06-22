@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -67,7 +68,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Chapter 3" href="chapter-3.html" />
     <link rel="prev" title="Overview" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -161,7 +161,6 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter-3.html">Chapter 3</a></li>
 </ul>
 
     </div>
@@ -311,18 +310,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-7">Exercise 2.7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-8">Exercise 2.8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-9">Exercise 2.9</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-10">Exercise 2.10</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-11">Exercise 2.11</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-12">Exercise 2.12</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-13">Exercise 2.13</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-14">Exercise 2.14</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
 </ul>
             </nav>
         </div>
@@ -338,430 +325,60 @@ document.write(`
 <h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Permalink to this heading">#</a></h1>
 <section id="exercise-2-1">
 <h2>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this heading">#</a></h2>
-<p>For each one of the following sets, determine whether it is a polyhedron.</p>
-<p>(a) The set of all <span class="math notranslate nohighlight">\((x, y)\in \mathcal{R}^2\)</span> satisfying the constraints:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-x\cos\theta+y\sin\theta&amp;\leq 1,\quad \forall~\theta \in[0, \pi/2],\\
-x&amp;\geq 0,\\
-y&amp;\geq 0.
-\end{aligned}
-\end{split}\]</div>
-<p>(b) The set of all <span class="math notranslate nohighlight">\(x\in\mathcal{R}\)</span> satisfying the constraint <span class="math notranslate nohighlight">\(x^2 - 8x + 15 \leq 0\)</span>.</p>
-<p>(c) The empty set.</p>
+<p>Let <span class="math notranslate nohighlight">\(C \subset \mathcal{R}^n\)</span> be a convex set, with <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in C\)</span>, and let <span class="math notranslate nohighlight">\(\theta_1, \dots, \theta_k \in \mathcal{R}\)</span> satisfy <span class="math notranslate nohighlight">\(\theta_i \geq 0, \theta_1 + \dots + \theta_k = 1\)</span>. Show that <span class="math notranslate nohighlight">\(\theta_1x_1 + \dots + \theta_kx_k \in C\)</span>. (The definition of convexity is that this holds for <span class="math notranslate nohighlight">\(k = 2\)</span>; you must show it for arbitrary <span class="math notranslate nohighlight">\(k\)</span>.) Hint. Use induction on <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
-<p>(a) The set equals <span class="math notranslate nohighlight">\(\{ (x,y) | x \geq 0, y \geq 0, x^2 + y^2 \leq 1 \}\)</span>, which has the following image:</p>
-<p><img alt="circle.png" src="_images/2-1.png" /></p>
-<p>It is a set represented by infinite linear constraints, while a polyhedron is formed by <strong>finite</strong> linear constraints.</p>
-<p>(b) The set is <span class="math notranslate nohighlight">\(\{x\geq 3, x\leq 5\}\)</span> and is a polyhedron.</p>
-<p>(c) The empty set can be represented as <span class="math notranslate nohighlight">\(\{x\geq 0, x&lt; 0\}\)</span> and is a polyhedron.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A polyhedron is formed by finite <strong>linear</strong> constraints.</p>
-</div>
+<p><em>Proof.</em></p>
+<p>When <span class="math notranslate nohighlight">\(k=2\)</span>, it is true by the definition of convex set. Assume it is true for <span class="math notranslate nohighlight">\(k-1\)</span>, now we prove for <span class="math notranslate nohighlight">\(k\)</span>. For the parameters <span class="math notranslate nohighlight">\(\theta_1,\dots,\theta_{k}\)</span>, if <span class="math notranslate nohighlight">\(\theta_1=\dots=\theta_{k-1}=0\)</span>, <span class="math notranslate nohighlight">\(\theta_k=1\)</span> and <span class="math notranslate nohighlight">\(\theta_1x_1 + \dots + \theta_kx_k \in C\)</span>. If <span class="math notranslate nohighlight">\(\theta_1+\dots+\theta_{k-1}\neq 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\theta_1x_1 + \dots + \theta_{k-1}x_{k-1}+\theta_kx_k=(\theta_1+\dots+\theta_{k-1})\left[\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\right]+\theta_{k}x_k
+\]</div>
+<p>Because <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}=1\)</span> and we assume the property is true for <span class="math notranslate nohighlight">\(k-1\)</span>, <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\in C\)</span> and it is a point inside <span class="math notranslate nohighlight">\(C\)</span>. We can view the above formula as the convex combination of two points <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\)</span>, which is inside the convex set <span class="math notranslate nohighlight">\(C\)</span>.</p>
 </section>
 <section id="exercise-2-2">
 <h2>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(f:\mathcal{R}^n\rightarrow\mathcal{R}\)</span> be a convex function and let <span class="math notranslate nohighlight">\(c\)</span> be some constant. Show that the set <span class="math notranslate nohighlight">\(S = \{\bf{x} \in \mathcal{R}^n\mid f(\bf{x}) \leq c\}\)</span> is convex.</p>
+<p>Show that a set is convex if and only if its intersection with any line is convex. Show that a set is affine if and only if its intersection with any line is affine.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
-<p>Assume two random element <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> in the set <span class="math notranslate nohighlight">\(S\)</span>,  therefore</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
- \begin{aligned}
- f(x_1)\leq c\\
- f(x_2)\leq c
- \end{aligned}
-\end{split}\]</div>
-<p>For a parameter <span class="math notranslate nohighlight">\(\theta\in [0, 1]\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
- \begin{aligned}
- \theta f(x_1)&amp;\leq  \theta c\\
- (1-\theta)f(x_2)&amp;\leq  (1-\theta) c
- \end{aligned}
-\end{split}\]</div>
-<p>Thus,</p>
-<div class="math notranslate nohighlight">
-\[
- \theta f(x_1)+ (1-\theta)f(x_2)\leq c
-\]</div>
-<p>Since <span class="math notranslate nohighlight">\(f\)</span> is a convex function,</p>
-<div class="math notranslate nohighlight">
-\[
-f(\theta x_1+(1-\theta)x_2)\leq \theta f(x_1)+ (1-\theta)f(x_2)
-\]</div>
-<p>And this leads to</p>
-<div class="math notranslate nohighlight">
-\[
-f(\theta x_1+(1-\theta)x_2)\leq c
-\]</div>
-<p>Therefore, the set <span class="math notranslate nohighlight">\(S\)</span> is convex. <span class="math notranslate nohighlight">\(\Box\)</span></p>
+<p><em>Proof.</em></p>
+<p>A line is a convex set, its intersection with another convex set is also convex. Conversely, suppose the intersection of a set with any line is convex, take any two distinctive points from the set, the intersection of the set with the line through the two points is convex. Therefore the convex combination of the two points belongs to the intersection and also belongs to the set. Hence the set is convex. The second part about affinity can be proved similarly.</p>
 </section>
 <section id="exercise-2-3">
 <h2>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Permalink to this heading">#</a></h2>
-<p><strong>(Basic feasible solutions in standard form polyhedra with upper bounds)</strong> Consider a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> and <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span>, and assume that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has linearly independent rows. Provide a procedure analogous to the one in Section 2.3 for constructing basic solutions, and prove an analog of Theorem 2.4.</p>
+<p><em>Midpoint convexity</em>. A set <span class="math notranslate nohighlight">\(C\)</span> is midpoint convex if whenever two points <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> are in <span class="math notranslate nohighlight">\(C\)</span>, the average or midpoint <span class="math notranslate nohighlight">\((a + b)/2\)</span> is in <span class="math notranslate nohighlight">\(C\)</span>. Obviously a convex set is midpoint convex. It can be proved that under mild conditions midpoint convexity implies convexity. As a simple case, prove that if <span class="math notranslate nohighlight">\(C\)</span> is closed and midpoint convex, then <span class="math notranslate nohighlight">\(C\)</span> is convex.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
-<p>The only difference of the above statement with Theorem 2.4 is that there are upper bounds for <span class="math notranslate nohighlight">\(\bf x\)</span>. An analogous theorem is below:</p>
-<p><em>Theoreom</em></p>
-<p>For a polyhedron defined by the constraints <span class="math notranslate nohighlight">\(\bf Ax = b\)</span>, <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m\times n\)</span>, <span class="math notranslate nohighlight">\(\bf 0\leq x\leq u\)</span> and <span class="math notranslate nohighlight">\(m\)</span> independent rows. <span class="math notranslate nohighlight">\(\bf x\)</span> is a baisic solutions if and only if there exists indices <span class="math notranslate nohighlight">\(B(1), B(2),\dots, B(m)\)</span> such that:</p>
-<p>(a) the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m)}\)</span> are linear independent.</p>
-<p>(b) if <span class="math notranslate nohighlight">\(i\neq B(1),\dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span> or <font color=red><span class="math notranslate nohighlight">\(x_i=u_i\)</span></font>.</p>
 <p><em>Proof.</em></p>
-<p>Assume a solution <span class="math notranslate nohighlight">\(x\)</span> satsifying (a) and (b), and <span class="math notranslate nohighlight">\(U\)</span> is the set of indecies that <span class="math notranslate nohighlight">\(x_i=u_i\)</span>, then</p>
+<p>For a point <span class="math notranslate nohighlight">\(x\)</span> which is the convex combinatin of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, withou loss of generality, assume <span class="math notranslate nohighlight">\(x\)</span> can be represented as:</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{x}_{B(1)}\mathbf{A}_{B(1)}+\dots+\mathbf{x}_{B(m)}\mathbf{A}_{B(m)}=b-\sum_{i\in U}x_iA_{B(i)}.
+x=\lambda a+(1-\lambda)b,
 \]</div>
-<p>Because the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m)}\)</span> are linear independent and <span class="math notranslate nohighlight">\(x\)</span> is a feasible solution, the above equations have a unique solution. And thus <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> has a unique solution. From Theorem 2.2, the <span class="math notranslate nohighlight">\(n\)</span> active constraints are independent and thus <span class="math notranslate nohighlight">\(\bf x\)</span> is a basic solution.</p>
-<p>For the converse, we assume that <span class="math notranslate nohighlight">\(\bf x\)</span> is a basic solution and we will show that conditions (a) and (b) are true.  Since <span class="math notranslate nohighlight">\(x\)</span> is a basice solution, it is the solution of <span class="math notranslate nohighlight">\(n\)</span> linear independent constraints. Therefore, the <span class="math notranslate nohighlight">\(n\)</span> columns of <span class="math notranslate nohighlight">\(\bf A\)</span> and all the components in <span class="math notranslate nohighlight">\(\bf x\)</span> form the equations:</p>
+<p>in which <span class="math notranslate nohighlight">\(\lambda\)</span> is a non-negative rational number. Now we formulate a sequence of <span class="math notranslate nohighlight">\(x_i\)</span> (similar to binary search): when <span class="math notranslate nohighlight">\(i=0\)</span>, <span class="math notranslate nohighlight">\(a_0=a\)</span>, <span class="math notranslate nohighlight">\(b_0=b\)</span>, <span class="math notranslate nohighlight">\(x_0=(a+b)/2\)</span>; when <span class="math notranslate nohighlight">\(i&gt;0\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[
-\mathbf{x}_{B(1)}\mathbf{A}_{B(1)}+\dots+\mathbf{x}_{B(n)}\mathbf{A}_{B(n)}=b.
-\]</div>
-<p>According to Theorem 2.2, the above equations has <span class="math notranslate nohighlight">\(n\)</span> linear independent column vectors and thus has a unique solution. Assume <span class="math notranslate nohighlight">\(\bf x\)</span> has <span class="math notranslate nohighlight">\(k\)</span> components that <span class="math notranslate nohighlight">\(x_i\neq 0, x_i\neq u_i\)</span>. Equivalently, <span class="math notranslate nohighlight">\(\sum_{i=1}^k x_i\mathbf{A}_{B(i)}=b-\sum_{i\in U}x_iA_{B(i)}\)</span> has unique solution and therefore its columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(k)}\)</span> are linear independent.</p>
-<p>We have shown that there are <span class="math notranslate nohighlight">\(k\)</span> independent columns in <span class="math notranslate nohighlight">\(\bf A\)</span> and this implies <span class="math notranslate nohighlight">\(k\leq m\)</span>. Since <span class="math notranslate nohighlight">\(\bf A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> independent rows, it also has <span class="math notranslate nohighlight">\(m\)</span> independent columns. Now (a) is proved and we prove (b) next. If <span class="math notranslate nohighlight">\(i\neq B(1), \dots, B(m)\)</span>, <span class="math notranslate nohighlight">\(i\neq B(1), \dots B(k)\)</span> and <span class="math notranslate nohighlight">\(x_i=0\)</span> or <span class="math notranslate nohighlight">\(x_i=u_i\)</span>, (b) is also satisfied.</p>
+\[\begin{split}
+a_i=\begin{cases}
+x_{i-1}\quad &amp;x&gt;x_{i-1}\\
+a_{i-1}\quad &amp;\text{otherwise}
+\end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+b_i=\begin{cases}
+b_{i-1}\quad &amp;x&gt;x_{i-1}\\
+x_{i-1}\quad &amp;\text{otherwise}
+\end{cases}
+\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\(x_i=(a_i+b_i)/2\)</span>. The sequence of <span class="math notranslate nohighlight">\(x_i\)</span> moves closer and closer to <span class="math notranslate nohighlight">\(x\)</span> as <span class="math notranslate nohighlight">\(i\)</span> increases, i.e., <span class="math notranslate nohighlight">\(\lim_{i\rightarrow \infty} x_i=x\)</span>. All the <span class="math notranslate nohighlight">\(x_i\)</span> are in the set <span class="math notranslate nohighlight">\(C\)</span> because of midpoint convexity. Since the set <span class="math notranslate nohighlight">\(C\)</span> is close, it contains all its limit points. Hence, <span class="math notranslate nohighlight">\(\lim_{i\rightarrow \infty} x_i=x \in C\)</span> and the convexity of <span class="math notranslate nohighlight">\(C\)</span> is proved.</p>
 <p><span class="math notranslate nohighlight">\(\Box\)</span></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Theorem: if equations <span class="math notranslate nohighlight">\(Ax=b\)</span> are consistent (has feasible solution), the columns of <span class="math notranslate nohighlight">\(\bf A\)</span> are linearly independent if and only if <span class="math notranslate nohighlight">\(\bf Ax = b\)</span> has a unique solution. (similar to Theorem 1.2)</p>
-<p>For <span class="math notranslate nohighlight">\(n\)</span> decision variables, <span class="math notranslate nohighlight">\(n\)</span> independent row constraints results in a unique solution and also results in <span class="math notranslate nohighlight">\(n\)</span> independent column vectors</p>
-</div>
-</section>
-<section id="exercise-2-4">
-<h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h2>
-<p>We know that every linear programming problem can be converted to an equivalent problem in standard form. We also know that nonempty polyhedra in standard form have at least one extreme point. We are then tempted to conclude that every nonempty polyhedron has at least one extreme point. Explain what is wrong with this argument.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>Assume a nonempty polydron is a hyperplane <span class="math notranslate nohighlight">\({\bf a'x}=b\)</span>, for any point <span class="math notranslate nohighlight">\(x_0\)</span> in it, we can find other two points <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> that satisfies <span class="math notranslate nohighlight">\(x_0 = \lambda x_1+(1-\lambda)x_2\)</span>, so there can not be an extreme point in this polyhedron.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A hyperplane is a polyhedron, but it does not has extreme points.</p>
-</div>
-</section>
-<section id="exercise-2-5">
-<h2>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Permalink to this heading">#</a></h2>
-<p><strong>(ExtreIne points of isoInorphic polyhedra)</strong> A mapping <span class="math notranslate nohighlight">\(f\)</span> is called affine if it is of the form <span class="math notranslate nohighlight">\(f(\bf x) = Ax + b\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix and <span class="math notranslate nohighlight">\(\bf b\)</span> is a vector. Let <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> be polyhedra in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span> , respectively. We say that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic if there exist affine mappings <span class="math notranslate nohighlight">\(f: P\rightarrow Q\)</span> and <span class="math notranslate nohighlight">\(g: Q\rightarrow P\)</span> such that <span class="math notranslate nohighlight">\(g(f(\bf x) = x\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{x} \in P\)</span>, and <span class="math notranslate nohighlight">\(f(g(\bf y)) = y\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{y} \in Q.\)</span> (Intuitively, isomorphic polyhedra have the same shape.)</p>
-<p>(a) If <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic, show that there exists a one-to-one correspondence between their extreme points. In particular, if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are as above, show that <span class="math notranslate nohighlight">\(\bf x\)</span> is an extreme point of <span class="math notranslate nohighlight">\(P\)</span> if and only if <span class="math notranslate nohighlight">\(f(\bf x)\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
-<p>(b) <strong>(Introducing slack variables leads to an isoInorphic polyhedron)</strong> Let <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \bf Ax \geq b, x\geq 0\}\)</span>, where <span class="math notranslate nohighlight">\(\bf A\)</span> is a matrix of dimensions <span class="math notranslate nohighlight">\(k\times n\)</span>. Let <span class="math notranslate nohighlight">\(Q = \{\bf (x, z) \in \mathcal{R}^{n+k} \mid Ax - z = b, x \geq 0, z \geq 0\}\)</span>. Show that <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>(a) We first prove：if <span class="math notranslate nohighlight">\(\bf x\)</span> is the extreme point of <span class="math notranslate nohighlight">\(P\)</span>, then it is also the extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
-<p>According to the definition of extreme point and Theorem 2.3 in the book, <span class="math notranslate nohighlight">\(\bf x\)</span> is also a vertex of <span class="math notranslate nohighlight">\(P\)</span>, then:
-there exists a vector <span class="math notranslate nohighlight">\(\bf c\)</span> such that <span class="math notranslate nohighlight">\(\bf c'x&lt;c'y\)</span> for all <span class="math notranslate nohighlight">\(\bf y\)</span> satisfying <span class="math notranslate nohighlight">\(\bf y\in P\)</span> and <span class="math notranslate nohighlight">\(\bf y\neq x\)</span>.</p>
-<p>Since <span class="math notranslate nohighlight">\(g(f(\bf x))=\bf x\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-&amp;\bf c'g(f(\mathbf x))&lt;c'g(f(y))\\
-\Rightarrow&amp;\bf c'g(Ax+b)&lt;c'g(Ay+b).
-\end{align*}
-\end{split}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(g\)</span> is an affine function, we assume <span class="math notranslate nohighlight">\(g(\bf x)=Dx+d\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-\Rightarrow&amp;\bf c'(D(Ax+b)+d))&lt;c'(D(Ay+b)+d))\\
-\Rightarrow&amp;\bf c'D(Ax+b)&lt;c'D(Ay+b)
-\end{align*}
-\end{split}\]</div>
-<p><span class="math notranslate nohighlight">\(\bf Ax+b\)</span>, <span class="math notranslate nohighlight">\(\bf Ay+b\)</span> are the points in <span class="math notranslate nohighlight">\(Q\)</span>. <span class="math notranslate nohighlight">\(\bf c'D\)</span> is a vector and <span class="math notranslate nohighlight">\(\bf Ax+b \neq Ay+b\)</span>. By the definition of vertex, <span class="math notranslate nohighlight">\(\bf Ax+b\)</span> is the vertex of <span class="math notranslate nohighlight">\(Q\)</span>. Thus it is also an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>.</p>
-<p>In a similar way, we can prove: if <span class="math notranslate nohighlight">\(\bf x\)</span> is the extreme point of <span class="math notranslate nohighlight">\(Q\)</span>, then it is also the extreme point of <span class="math notranslate nohighlight">\(P\)</span>。<span class="math notranslate nohighlight">\(\Box\)</span></p>
-<p>(b) By obtaining the formulas of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>, we can prove <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are isomorphic.</p>
-<p>The formulas of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are below:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-f=\bf \left(
-\begin{aligned}
-\bf I\\
-\bf 0
-\end{aligned}
-\right)x+
-\left(
-\begin{aligned}
-\bf 0\\
-\bf z
-\end{aligned}
-\right)
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-g=\bf (I, 0)\left(
-\begin{aligned}
-\bf x\\
-\bf z
-\end{aligned}
-\right)
-\end{split}\]</div>
-</section>
-<section id="exercise-2-6">
-<h2>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Permalink to this heading">#</a></h2>
-<p><strong>(Carath<span class="math notranslate nohighlight">\(\acute{\bf e}\)</span>odory’s theorem)</strong> Let <span class="math notranslate nohighlight">\(\bf A_1,\dots,A_n\)</span> be a collection of vectors in <span class="math notranslate nohighlight">\(\mathcal{R}^m\)</span>.</p>
-<p>(a) Let</p>
-<div class="math notranslate nohighlight">
-\[
-C =\{\sum \lambda_i\mathbf{A}_i\mid \lambda_1,\dots,\lambda_n\geq 0\}.
-\]</div>
-<p>Show that any element of <span class="math notranslate nohighlight">\(C\)</span> can be expressed in the form <span class="math notranslate nohighlight">\(\sum_{i=1}^n \lambda_i\mathbf{A}_i\)</span>, with <span class="math notranslate nohighlight">\(\lambda_i\geq 0\)</span>, and with at most <span class="math notranslate nohighlight">\(m\)</span> of the coefficients <span class="math notranslate nohighlight">\(\lambda_i\)</span> being nonzero. <em>Hint</em>: Consider the polyhedron</p>
-<div class="math notranslate nohighlight">
-\[
-\Lambda =\{(\lambda_1,\dots,\lambda_n)\in \mathcal{R}^n\mid\sum_{i=1}^n \lambda_i\mathbf{A}_i=\bf y\mid \lambda_1,\dots,\lambda_n\geq 0\}.
-\]</div>
-<p>(b) Let <span class="math notranslate nohighlight">\(P\)</span> be the convex hull of the vectors <span class="math notranslate nohighlight">\(\mathbf{A}_i\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-P=\left\{\sum_{i=1}^n \lambda_i\mathbf{A}_i\mid \sum_{i=1}^n \lambda_i =1, \lambda_1,\dots,\lambda_n\geq 0 \right \}.
-\]</div>
-<p>Show that any element <span class="math notranslate nohighlight">\(P\)</span> can be expressed in the form <span class="math notranslate nohighlight">\(\sum_{i=1}^n \lambda_i\mathbf{A}_i\)</span>, where <span class="math notranslate nohighlight">\(\sum_{i=1}^n \lambda_i=1\)</span> and <span class="math notranslate nohighlight">\(\lambda_i\geq 0\)</span> for all <span class="math notranslate nohighlight">\(i\)</span>, with at most <span class="math notranslate nohighlight">\(m+1\)</span> of the coefficients <span class="math notranslate nohighlight">\(\lambda_i\)</span> being 0.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>(a)Let <span class="math notranslate nohighlight">\( y \)</span> be a point in <span class="math notranslate nohighlight">\( C \)</span>. The polyhedron</p>
-<div class="math notranslate nohighlight">
-\[
-\Lambda = \left\{ (\lambda_1, \dots, \lambda_n) \in \mathbb{R}^n \mid \sum_{i=1}^n \lambda_i \mathbf{A}_i = \mathbf{y}, \lambda_1, \dots, \lambda_n \geq 0 \right\}
-\]</div>
-<p>is a standard form polyhedron and is non-empty (because <span class="math notranslate nohighlight">\(y\)</span> is a point in it). According to Corollary 2.2 in the textbook, a non-empty standard form polyhedron must have a basic feasible solution. According to Theorem 2.4, in a basic solution, the values of the non-basic variables (a total of <span class="math notranslate nohighlight">\(n - m\)</span>) are zero. Therefore, among <span class="math notranslate nohighlight">\(\lambda_1, \dots, \lambda_n\)</span>, at most <span class="math notranslate nohighlight">\(m\)</span> can be non-zero.</p>
-<p>(b) Let <span class="math notranslate nohighlight">\(y\)</span> be a point in <span class="math notranslate nohighlight">\(P\)</span>. Transform <span class="math notranslate nohighlight">\(P\)</span> into standard form:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-P = \left\{
-\left[
-\begin{aligned}
-\mathbf{A}\\
-\mathbf{1}'
-\end{aligned}
-\right] \mathbf{\lambda}
-=
-\left[\begin{aligned}
-\mathbf{y}\\
-1
-\end{aligned}
-\right], \mathbf{\lambda} \geq 0 \right\}
-\end{split}\]</div>
-<p>Since it is a non-empty standard form polyhedron, there exists a basic feasible solution. According to Theorem 2.4, the values of the non-basic variables (a total of <span class="math notranslate nohighlight">\( n - m - 1 \)</span>) are zero. Therefore, among <span class="math notranslate nohighlight">\( \lambda_1, \dots, \lambda_n \)</span>, at most <span class="math notranslate nohighlight">\( m + 1 \)</span> can be non-zero.</p>
-<p>Comment: This problem mainly examines the property that a non-empty standard form polyhedron must have a basic feasible solution (the form of a standard form polyhedron is <span class="math notranslate nohighlight">\( \{ \mathbf{Ax = b, x \geq 0} \} \)</span>).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The geometric significance of Carathéodory’s theorem is that any point in an <span class="math notranslate nohighlight">\( m \)</span>-dimensional convex hull can be represented by a convex combination of at most <span class="math notranslate nohighlight">\( m + 1 \)</span> points from the convex hull.</p>
-</div>
-</section>
-<section id="exercise-2-7">
-<h2>Exercise 2.7<a class="headerlink" href="#exercise-2-7" title="Permalink to this heading">#</a></h2>
-<p>Suppose that <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid \mathbf{a'_ix\geq b_i, i=1,\dots,m}\}\)</span> and <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid \mathbf{g'_ix\geq h_i, i=1,\dots,k}\}\)</span> are two representations of the same nonempty polyhedron. Suppose that the vectors <span class="math notranslate nohighlight">\(\mathbf{a_1,\dots, a_m}\)</span> span <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. Show that the same must be true for the vectors <span class="math notranslate nohighlight">\(\mathbf{g_1,\dots, g_k}\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>Let the polyhedron be <span class="math notranslate nohighlight">\(P\)</span>. Suppose that <span class="math notranslate nohighlight">\(\mathbf{g}_1, \dots, \mathbf{g}_k\)</span> cannot generate <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. Then there exists a vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> that is orthogonal to all of <span class="math notranslate nohighlight">\(\mathbf{g}_1, \dots, \mathbf{g}_k\)</span>. For any point <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span> that satisfies <span class="math notranslate nohighlight">\(\{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{g}_i' \mathbf{x} \geq h_i, i = 1, \dots, k\}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}_0 + \mathbf{d}\)</span> is also inside <span class="math notranslate nohighlight">\(P\)</span>, meaning that <span class="math notranslate nohighlight">\(P\)</span> contains a line. However, since <span class="math notranslate nohighlight">\(\mathbf{a}_1, \dots, \mathbf{a}_m\)</span> can generate <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>, there are <span class="math notranslate nohighlight">\(n\)</span> linearly independent vectors among <span class="math notranslate nohighlight">\(\mathbf{a}_1, \dots, \mathbf{a}_m\)</span>. According to Theorem 2.6, <span class="math notranslate nohighlight">\(P\)</span> cannot contain a line, which is a contradiction. Therefore, <span class="math notranslate nohighlight">\(\mathbf{g}_1, \dots, \mathbf{g}_k\)</span> must also generate <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>.</p>
-</section>
-<section id="exercise-2-8">
-<h2>Exercise 2.8<a class="headerlink" href="#exercise-2-8" title="Permalink to this heading">#</a></h2>
-<p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{x} \mid \mathbf{Ax = b}, \mathbf{x} \geq 0\}\)</span>, and assume that the rows of the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> are linearly independent. Let <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> be a basic solution, and let <span class="math notranslate nohighlight">\(J = \{i \mid x_i \neq 0\}\)</span>. Show that a basis is associated with the basic solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> if and only if every column <span class="math notranslate nohighlight">\(\mathbf{A}_i, i \in J\)</span>, is in the basis.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p><em>Proof.</em>
-(1) First, we prove that if each column vector <span class="math notranslate nohighlight">\(\mathbf{A}_i, i \in \mathbf{J}\)</span> is in the basis, then these column vectors correspond to a basic solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{B}=[\mathbf{A_{B(1)}, \dots, A_{B(m)}}]\)</span> be the basis. Since each column vector <span class="math notranslate nohighlight">\(\mathbf{A}_i, i \in \mathbf{J}\)</span> is in the basis <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, they are linearly independent. Also since <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is full row ranked, any <span class="math notranslate nohighlight">\(m\)</span> columns of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is independent (fullfill Theorem 2.4 a). According to the problem statement, if <span class="math notranslate nohighlight">\(j \notin \mathbf{J}\)</span>, then <span class="math notranslate nohighlight">\(x_j = 0\)</span> (fullfill Theorem 2.4 b). According to Theorem 2.4 in the textbook, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a basic solution.</p>
-<p>(2) Next, we prove that if the column vectors <span class="math notranslate nohighlight">\(\mathbf{A}_i, i \in \mathbf{J}\)</span> correspond to a basic solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, then they are in the basis.</p>
-<p>According to Theorem 2.4, if <span class="math notranslate nohighlight">\(i\neq \mathbf{B}(1),\dots, \mathbf{B}_m\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span>. According to the definition of <span class="math notranslate nohighlight">\(\mathbf{J}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{J}\subset \{\mathbf{B}(1),\dots, \mathbf{B}_m\}\)</span>, so column vectors <span class="math notranslate nohighlight">\(\mathbf{A}_i, i \in \mathbf{J}\)</span> is in the basis.</p>
-<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
-</section>
-<section id="exercise-2-9">
-<h2>Exercise 2.9<a class="headerlink" href="#exercise-2-9" title="Permalink to this heading">#</a></h2>
-<p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(\{\mathbf {x \mid Ax = b, x \geq 0}\}\)</span>, and assume that the rows of the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> are linearly independent.</p>
-<p>(a) Suppose that two different bases lead to the same basic solution. Show that the basic solution is degenerate.</p>
-<p>(b) Consider a degenerate basic solution. Is it true that it corresponds to two or more distinct bases? Prove or give a counterexample.</p>
-<p>(c) Suppose that a basic solution is degenerate. Is it true that there exists an adjacent basic solution which is degenerate? Prove or give a counterexample.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>(a) Consider a matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> with <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns, and two bases <span class="math notranslate nohighlight">\(\mathbf{B}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}_2\)</span>. Assume that both basic solutions are non-degenerate, meaning that all <span class="math notranslate nohighlight">\(m\)</span> variables in the basic solution corresponding to basis <span class="math notranslate nohighlight">\(\mathbf{B}_1\)</span> are non-zero, and all <span class="math notranslate nohighlight">\(m\)</span> variables in the basic solution corresponding to basis <span class="math notranslate nohighlight">\(\mathbf{B}_2\)</span> are also non-zero. Since the two bases are different, there is at least one variable that is in <span class="math notranslate nohighlight">\(\mathbf{B}_1\)</span> but not in <span class="math notranslate nohighlight">\(\mathbf{B}_2\)</span>, which leads to <span class="math notranslate nohighlight">\(m+1\)</span> non-zero variables in the solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>. This contradicts the fact that <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a basic solution. Therefore, the basic solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> must be degenerate.</p>
-<p>(b) No. The simple counter example is <span class="math notranslate nohighlight">\(\{x=0, x\geq 0\}\)</span>. The degenerate basic solution is <span class="math notranslate nohighlight">\(x=0\)</span>, but it corresponds to only one base.</p>
-<p>(c) NO. An counter example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-&amp;x_1+x_2=1\\
-&amp;x_2+x_3=1\\
-&amp;x_1\geq0,x_2\geq 0,x_3\geq 0
-\end{aligned}
-\end{split}\]</div>
-<p>Base <span class="math notranslate nohighlight">\(\{\mathbf A_1,\mathbf A_2\}\)</span> and<span class="math notranslate nohighlight">\(\{\mathbf A_2,\mathbf A_3\}\)</span>  all corresponds to a degenerate solution <span class="math notranslate nohighlight">\([0, 1, 0]\)</span>. But the solution <span class="math notranslate nohighlight">\([1, 0, 1]\)</span> of their adjacent bas <span class="math notranslate nohighlight">\(\{\mathbf A_1,\mathbf A_3\}\)</span> is not degenerate.</p>
-</section>
-<section id="exercise-2-10">
-<h2>Exercise 2.10<a class="headerlink" href="#exercise-2-10" title="Permalink to this heading">#</a></h2>
-<p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(P = \{\bf x \mid Ax = b, x \geq 0\}\)</span>. Suppose that the matrix <span class="math notranslate nohighlight">\(\bf A\)</span> has dimensions <span class="math notranslate nohighlight">\(m \times n\)</span> and that its rows are linearly independent. For each one of the following statements, state whether it is true or false. If true, provide a proof, else, provide a counterexample.</p>
-<p>(a) If <span class="math notranslate nohighlight">\(n = m + 1\)</span>, then <span class="math notranslate nohighlight">\(P\)</span> has at most two basic feasible solutions.</p>
-<p>(b) The set of all optimal solutions is bounded.</p>
-<p>(e) At every optimal solution, no more than <span class="math notranslate nohighlight">\(m\)</span> variables can be positive.</p>
-<p>(d) If there is more than one optimal solution, then there are uncountably many optimal solutions.</p>
-<p>(e) If there are several optimal solutions, then there exist at least two basic feasible solutions that are optimal.</p>
-<p>(f) Consider the problem of minimizing <span class="math notranslate nohighlight">\(\max\{\bf c'x, d'x\}\)</span> over the set <span class="math notranslate nohighlight">\(P\)</span>. If this problem has an optimal solution, it must have an optimal solution which is an extreme point of <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>(a) Right. The key is to prove that <span class="math notranslate nohighlight">\(P\)</span> is one-dimensional。</p>
-<p><em>Proof.</em></p>
-<p>Since the rows in <span class="math notranslate nohighlight">\(\bf A\)</span> are linear independent, rank(<span class="math notranslate nohighlight">\(\bf A\)</span>) <span class="math notranslate nohighlight">\(=m\)</span>. Accodering to the knowledge in linear algebra,</p>
-<div class="math notranslate nohighlight">
-\[
-        \text{dim}~ \text{NUL}(\mathbf{A}) + \text{rank}(\bf A) = n 
-\]</div>
-<p>Therefore, the dimensiion of the null space of <span class="math notranslate nohighlight">\(\bf A\)</span> is 1, i.e.,  the solution space of equations <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> is 1. Accordering to linear algebra, the dimension of the solutio space is <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> is equal to that in <span class="math notranslate nohighlight">\(\bf Ax=0\)</span> (becaause the general solution of <span class="math notranslate nohighlight">\(\bf Ax=b\)</span> equals to any feasible solution plus the solution of 的 <span class="math notranslate nohighlight">\(\bf Ax=0\)</span>).</p>
-<p>Since the solution of <span class="math notranslate nohighlight">\(P\)</span> is the subset of the solutions in <span class="math notranslate nohighlight">\(\bf Ax=b\)</span>, <span class="math notranslate nohighlight">\(P\)</span> is the subset of a line, i.e., <span class="math notranslate nohighlight">\(P\)</span> is a line segemen, point or empty space, all of which has at most two vertices. So, there are at most 2 basice feasible solutions for <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
-<p>(b) Wrong. A counter example：</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\min\quad &amp;0\\
-\text{s.t.}\quad&amp;x_2= 0\\
-&amp;x_1\geq 0
-\end{aligned}
-\end{split}\]</div>
-<p>When <span class="math notranslate nohighlight">\(x_2=0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> be any real number, it can be an optimal solution. So the set of optimal solutions is not bounded.</p>
-<p>(c) Wrong. If the coefficients <span class="math notranslate nohighlight">\(\bf c\)</span> in the objective function are <span class="math notranslate nohighlight">\(\bf 0\)</span>, any feasible solution are optimal and there can be more than <span class="math notranslate nohighlight">\(m\)</span> variables that are positive.</p>
-<p>(d) Right. It is easy to verify the points on the line segment of two optimal soulutions are also optimal.</p>
-<p>(e) Wrong. A counter example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\min\quad &amp;x_1\\
-\text{s.t.}\quad &amp; x_2\geq 0\\
-&amp;x_1\geq 0
-\end{aligned}
-\end{split}\]</div>
-<p>(0, 1) and (0, 2) are both optimal solutions, but there is only one basic feasible solution (0, 0).</p>
-<p>(f) wrong. A counter example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\min\quad &amp;\max\{x_1-1, -x_1+1\}\\
-\text{s.t.}\quad &amp; x_2= 1\\
-&amp;x_1\geq 0
-\end{aligned}
-\end{split}\]</div>
-<p>The objective of the above problem equals <span class="math notranslate nohighlight">\(|x_1-1|\)</span>. The unique optimal solution is (1, 1), which is not an extreme point.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>For this nonlinear objetive function in a polyhron, the optimal solution may not be the extrem point.</p></li>
-<li><p>The solution of <span class="math notranslate nohighlight">\(n\)</span> linear independent active constraints is basic solution (<span class="math notranslate nohighlight">\(n\)</span> is the number of variables).</p></li>
+<li><p>A set is closed if and only if it contains its limit points.</p></li>
+<li><p>Rantional number set <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span> is midpoint convex but it is not convex since it is not a closed set.</p></li>
 </ul>
 </div>
-</section>
-<section id="exercise-2-11">
-<h2>Exercise 2.11<a class="headerlink" href="#exercise-2-11" title="Permalink to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(P =\{x \in \mathcal{R}^n \mid \mathbf{Ax\geq b}\}\)</span>. Suppose that at a particular basic feasible solution, there are <span class="math notranslate nohighlight">\(k\)</span> active constraints, with <span class="math notranslate nohighlight">\(k &gt; n\)</span>. Is it true that there exist exactly <span class="math notranslate nohighlight">\(k\choose n\)</span> bases that lead to this basic feasible solution? Here <span class="math notranslate nohighlight">\({k\choose k} = k! / (n! (k - n) !)\)</span> is the number of ways that we can choose <span class="math notranslate nohighlight">\(n\)</span> out of <span class="math notranslate nohighlight">\(k\)</span> given items.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>No.There may be dependent constrains in the <span class="math notranslate nohighlight">\(k\)</span> active constraints. We can find a counter example:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-x\geq 1\\
-2x\geq 2
-\end{align*}
-\end{split}\]</div>
-<p>In this example, <span class="math notranslate nohighlight">\(k=2\)</span>, <span class="math notranslate nohighlight">\(n=1\)</span>. However, there is only 1 base that leads to the basic feasible solution.</p>
-</section>
-<section id="exercise-2-12">
-<h2>Exercise 2.12<a class="headerlink" href="#exercise-2-12" title="Permalink to this heading">#</a></h2>
-<p>Consider a nonempty polyhedron <span class="math notranslate nohighlight">\(P\)</span> and suppose that for each variable <span class="math notranslate nohighlight">\(x_i\)</span> we have either the constraint <span class="math notranslate nohighlight">\(x_i\geq 0\)</span> or the constraint <span class="math notranslate nohighlight">\(x_i\leq 0\)</span>. Is it true that <span class="math notranslate nohighlight">\(P\)</span> has at least one basic feasible solution?</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>Yes. For all the constraints <span class="math notranslate nohighlight">\(x_i\geq 0\)</span> or the constraint <span class="math notranslate nohighlight">\(x_i\leq 0\)</span>, there are <span class="math notranslate nohighlight">\(n\)</span> of them that are independent. According to Theorem 2.6 (c), there exists a basic feasible solution for this nonempty polyhedron.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>According to Theorem 2.6, there must exist a basic fesible solution in a non-empty polyhedron if there are <span class="math notranslate nohighlight">\(m\)</span> linear independent row coefficients constraints.</p>
-</div>
-</section>
-<section id="exercise-2-13">
-<h2>Exercise 2.13<a class="headerlink" href="#exercise-2-13" title="Permalink to this heading">#</a></h2>
-<p>Consider the standard form polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf x \mid\mathbf Ax = \mathbf b, x \geq 0\}\)</span>. Suppose that the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>, of dimensions <span class="math notranslate nohighlight">\(m \times n\)</span>, has linearly independent rows, and that all basic feasible solutions are nondegenerate. Let x be an element of <span class="math notranslate nohighlight">\(P\)</span> that has exactly <span class="math notranslate nohighlight">\(m\)</span> positive components.</p>
-<p>(a) Show that x is a basic feasible solution.</p>
-<p>(b) Show that the result of part (a) is false if the nondegeneracy assumption is removed.</p>
-<hr class="docutils" />
-<p><strong>Solution:</strong></p>
-<p>(a) <em>Proof.</em></p>
-<p>We apply Theorem 2.4 to prove it. Since <span class="math notranslate nohighlight">\(\mathbf x\)</span> has <span class="math notranslate nohighlight">\(m\)</span> positive components, let <span class="math notranslate nohighlight">\(B(1), \dots, B(m)\)</span> be its correponding indices. This already satifies Theorem 2.4 (b) that if <span class="math notranslate nohighlight">\(i\neq B(1),\dots,B(m)\)</span>, <span class="math notranslate nohighlight">\(x_i=0\)</span>. Now we need to prove Theorem 2.4 (a) that the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots,\mathbf{A}_{B(m)}\)</span> are linear independent. We prove it by contradiction.</p>
-<p>If the columns <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots,\mathbf{A}_{B(m)}\)</span> are linear dependent, there exists one columnn that can be the linear combination of others. We suppose this column be <span class="math notranslate nohighlight">\(\mathbf{A}_{B(m)}\)</span>, i.e.,</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A}_{B(m)}=\alpha_1\mathbf{A}_{B(1)}+\dots+\alpha_{m-1}\mathbf{A}_{B(m-1)}.\tag{1}
-\]</div>
-<p>Since</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{Ax}=\sum_{i=1}^n\mathbf{A}_ix_i=b,\tag{2}
-\]</div>
-<p>by putting (2) to (1), we have:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-&amp;\mathbf{A}_{B(1)}x_{B(1)}+\dots+\mathbf{A}_{B(m-1)}x_{B(m-1)}+\mathbf{A}_{B(m-1)}x_{B(m-1)}+(\alpha_1\mathbf{A}_{B(1)}+\dots+\alpha_{m-1}\mathbf{A}_{B(m-1)})x_{B(m)}=b\\
-\Rightarrow &amp;\mathbf{A}_{B(1)}(x_{B(1)}+\alpha_1x_{B(m)})+\dots+\mathbf{A}_{B(m-1)}(x_{B(m-1)}+\alpha_{m-1}x_{B(m)})=b.
-\end{align}
-\end{split}\]</div>
-<p>Since the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> has <span class="math notranslate nohighlight">\(m\)</span> independent rows, it must also have <span class="math notranslate nohighlight">\(m\)</span> independent columns. We can find another column <span class="math notranslate nohighlight">\(\mathbf{A}_{B(k)}\)</span>, <span class="math notranslate nohighlight">\(k\neq B(1),\dots, B(m)\)</span> that is independent with <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m-1)}\)</span>. And because <span class="math notranslate nohighlight">\(\mathbf{Ax=b}\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{A}_{B(1)}(x_{B(1)}+\alpha_1x_{B(m)})+\dots+\mathbf{A}_{B(m-1)}(x_{B(m-1)}+\alpha_{m-1}x_{B(m-1)})+0\mathbf{A}_k=b.\tag(3)
-\]</div>
-<p>if <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m-1)}\)</span> are independent, this will result in a basic feasible solution <span class="math notranslate nohighlight">\(\left(x_{B(1)}+\alpha_1 x_{B(m)},\dots, x_{B(m-1)}+\alpha_{m-1}x_{B(m-1)}, 0\right)\)</span>, which is degenerate and contradicts with the fact all basic solutions are nondegenerate.</p>
-<p>if <span class="math notranslate nohighlight">\(\mathbf{A}_{B(1)},\dots, \mathbf{A}_{B(m-1)}\)</span> are dependent, find the independent columns from them, and replenish with some remaining columns from the matrix <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> to get <span class="math notranslate nohighlight">\(m\)</span> independent columns. Repeat a similar procedure as above from (1) to (3), this will also lead to a degenerate basic feasible solution, which contradicts the nondegerate fact.</p>
-<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
-<p>(b) An counter example.</p>
-<p>A standard polyhedron:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-x_2+x_3=4\\
-x_2=4\\
-x_1,x_2,x_3\geq 0
-\end{align}
-\end{split}\]</div>
-<p>One solution (1,4,0) is not a basic feasible solution.</p>
-</section>
-<section id="exercise-2-14">
-<h2>Exercise 2.14<a class="headerlink" href="#exercise-2-14" title="Permalink to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(P\)</span> be a bounded polyhedron in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> , let <span class="math notranslate nohighlight">\(\mathbf a\)</span> be a vector in <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span> ,and let <span class="math notranslate nohighlight">\(b\)</span> be some scalar. We define</p>
-<div class="math notranslate nohighlight">
-\[
-Q = \{\mathbf{x}\in P \mid \mathbf{a'x} = b\} .
-\]</div>
-<p>Show that every extreme point of <span class="math notranslate nohighlight">\(Q\)</span> is either an extreme point of <span class="math notranslate nohighlight">\(P\)</span> or a convex combination of two adjacent extreme points of <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<hr class="docutils" />
-<html>
-</html><p><img alt="" src="_images/2-14-1.png" /></p>
-<p><img alt="" src="_images/2-14-2.png" /></p>
-<p><em>Proof.</em></p>
-<p>Assume the polyhedron <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\(\{\mathbf{x}\in \mathcal{R}^n\mid\mathbf{A_1x=b_1}, \mathbf{x}\geq 0\}\)</span>, then <span class="math notranslate nohighlight">\(Q\)</span> can be written as:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align}
-\mathbf{A_1x}&amp;=\mathbf{b_1}\\
-a'x&amp;=b\\
-\mathbf{x}&amp;\geq \mathbf{0}
-\end{align}
-\end{split}\]</div>
-<p>Assume <span class="math notranslate nohighlight">\(x^{\ast}\)</span> is an extreme point of <span class="math notranslate nohighlight">\(Q\)</span>. Since the extreme point is also a basic feasible solution (Theorem 2.3), from the definition of 2.9, there are <span class="math notranslate nohighlight">\(n\)</span> independent active constraints at <span class="math notranslate nohighlight">\(\mathbf{x^{\ast}}\)</span>. Thre are two scenarios:</p>
-<p>(1) if the <span class="math notranslate nohighlight">\(n\)</span> independent active constraints are all in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{x^{\ast}}\)</span> is the basic feasible solution of <span class="math notranslate nohighlight">\(P\)</span> by definition 2.9 and also an extreme point of it.</p>
-<p>(2) if <span class="math notranslate nohighlight">\(\mathbf{a'x}=b\)</span> is also an active constraint in them, then there are <span class="math notranslate nohighlight">\(n-1\)</span> independent active constraints in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>. Let <span class="math notranslate nohighlight">\(I\)</span> represent the row index in <span class="math notranslate nohighlight">\(\mathbf{A_1x=b_1}\)</span>that are active consraints, i.e., <span class="math notranslate nohighlight">\(I=\{i\mid \mathbf{a'^i_1x}=b^i_1\}\)</span>. Then all the <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> lie in a proper subspace of <span class="math notranslate nohighlight">\(\mathcal{R}^n\)</span>. There exists a non-zero vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> that are orthogonal to every <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i\mathbf{d}=0\)</span>. Let us consider a line:</p>
-<div class="math notranslate nohighlight">
-\[
-y=\mathbf{x}^\ast+\lambda\mathbf{d},
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is an arbitrary scalar. For all <span class="math notranslate nohighlight">\(i\in I\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a'}_i^1(\mathbf{x}^\ast+\lambda\mathbf{d})=0\)</span>, thus the active constraints remain active at all points on this line.  If we vary the values of <span class="math notranslate nohighlight">\(\lambda\)</span>, some of the original active constraints will eventually be violated. Bus since <span class="math notranslate nohighlight">\(P\)</span> is a bounded polyhedron,it does not contain a line. At the point where the orginal active constraints is about to be violated, there will be a new active constraint: <span class="math notranslate nohighlight">\(\mathbf{a'_j}(\mathbf{x}^\ast+\lambda\mathbf{d})=b_j\)</span>. <span class="math notranslate nohighlight">\(\mathbf{a'_2}\)</span> is independent with <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> because if not so, it will be a linear combination of <span class="math notranslate nohighlight">\(\mathbf{a'}_1^i (i\in I)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a'}_j\mathbf{x}^\ast=b_j\)</span>, which contradicts the definiton of <span class="math notranslate nohighlight">\(I\)</span> (<span class="math notranslate nohighlight">\(j\)</span> should also be in <span class="math notranslate nohighlight">\(I\)</span> but it not). Hence, <span class="math notranslate nohighlight">\(\mathbf{a'_jx^\ast}\neq b_j\)</span> and <span class="math notranslate nohighlight">\(\mathbf{a'_jd}\neq 0\)</span>. By moving from <span class="math notranslate nohighlight">\(\mathbf{x^\ast}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{x^\ast}+\lambda\mathbf{d}\)</span>, we now have <span class="math notranslate nohighlight">\(n\)</span> active constraints and the point is an extreme point of <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<p>Since <span class="math notranslate nohighlight">\(\lambda\)</span> can be both positive and negative, we have two directions along the line <span class="math notranslate nohighlight">\(y=\mathbf{x}^\ast+\lambda\mathbf{d}\)</span> and will reach two extreme points of <span class="math notranslate nohighlight">\(P\)</span>, which have <span class="math notranslate nohighlight">\(n-1\)</span> same indepedent active constraints and are adjacent. The point <span class="math notranslate nohighlight">\(\mathbf{x^\ast}\)</span> lies in the line segment between the two extreme points and it is a convex combination of them.</p>
-<p><span class="math notranslate nohighlight">\(\Box\)</span></p>
-<p>The above two figures shows the situation when <span class="math notranslate nohighlight">\(P\)</span> is a rectangular and <span class="math notranslate nohighlight">\(Q\)</span> is a line.</p>
-</section>
-<section id="exercise-2-15">
-<h2>Exercise 2.15<a class="headerlink" href="#exercise-2-15" title="Permalink to this heading">#</a></h2>
-<p><strong>(Edges joining adjacent vertices)</strong> Consider the polyhedron <span class="math notranslate nohighlight">\(P = \{\mathbf{x} \in \mathcal{R}^n \mid \mathbf{a'_ix} \geq b_i, i = 1,\dots,  m\}\)</span> . Suppose that <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are distinct basic feasible solutions that satisfy <span class="math notranslate nohighlight">\(\mathbf{a'_iu} = \mathbf{a'_iv} = b_i , i = 1, \dots, n - 1\)</span>, and that the vectors <span class="math notranslate nohighlight">\(\mathbf{a}_l,\dots, \mathbf{a}_{n- 1}\)</span> are linearly independent. (In particular, <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span> are adjacent.) Let <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span> be the segment that joins <span class="math notranslate nohighlight">\(\mathbf u\)</span> and <span class="math notranslate nohighlight">\(\mathbf v\)</span>. Prove that <span class="math notranslate nohighlight">\(L = \{\mathbf{z}\in P \mid \mathbf{a'}_iz = b_i , i = 1, \dots, n - 1\}\)</span> .</p>
-<hr class="docutils" />
-<p><em>Proof.</em></p>
-<p>In the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>, there are <span class="math notranslate nohighlight">\(n-1\)</span> independent rows and <span class="math notranslate nohighlight">\(n\)</span> columns. From Exercise 2.10 (a), there are at most 2 basic feasible solutions. Since <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are two of them, <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are exactly the 2 extreme points in it and it is a line segment. And it is bounded for this line segment..  According to Theorem 2.9, a bounded polyhedron is the convex hull of its extreme points. <span class="math notranslate nohighlight">\(L = \{\lambda\mathbf{u} + (1 - \lambda)\mathbf{v}\mid 0\leq\lambda\leq 1\}\)</span>  is just the convex hull of extreme points <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.So it equals to the polyhedron <span class="math notranslate nohighlight">\(\{\mathbf{z}\in P  \mid \mathbf{a'_iz} = b_i, i = 1,\dots,  n-1\}\)</span>.</p>
 </section>
 </section>
 
@@ -805,15 +422,6 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
         <p class="prev-next-title">Overview</p>
       </div>
     </a>
-    <a class="right-next"
-       href="chapter-3.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter 3</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -835,18 +443,6 @@ y=\mathbf{x}^\ast+\lambda\mathbf{d},
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-7">Exercise 2.7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-8">Exercise 2.8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-9">Exercise 2.9</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-10">Exercise 2.10</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-11">Exercise 2.11</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-12">Exercise 2.12</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-13">Exercise 2.13</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-14">Exercise 2.14</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-15">Exercise 2.15</a></li>
 </ul>
   </nav></div>
 
