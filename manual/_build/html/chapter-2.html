@@ -330,10 +330,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defintion-of-convexity">Defintion of convexity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-7">Exercise 2.7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-8">Exercise 2.8</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -347,9 +357,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
 <h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Link to this heading">#</a></h1>
+<section id="defintion-of-convexity">
+<h2>Defintion of convexity<a class="headerlink" href="#defintion-of-convexity" title="Link to this heading">#</a></h2>
 <section id="exercise-2-1">
-<h2>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Link to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(C \subset \mathcal{R}^n\)</span> be a convex set, with <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in C\)</span>, and let <span class="math notranslate nohighlight">\(\theta_1, \dots, \theta_k \in \mathcal{R}\)</span> satisfy <span class="math notranslate nohighlight">\(\theta_i \geq 0, \theta_1 + \dots + \theta_k = 1\)</span>. Show that <span class="math notranslate nohighlight">\(\theta_1x_1 + \dots + \theta_kx_k \in C\)</span>. (The definition of convexity is that this holds for <span class="math notranslate nohighlight">\(k = 2\)</span>; you must show it for arbitrary <span class="math notranslate nohighlight">\(k\)</span>.) Hint. Use induction on <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<h3>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(C \subset \mathbb{R}^n\)</span> be a convex set, with <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in C\)</span>, and let <span class="math notranslate nohighlight">\(\theta_1, \dots, \theta_k \in \mathbb{R}\)</span> satisfy <span class="math notranslate nohighlight">\(\theta_i \geq 0, \theta_1 + \dots + \theta_k = 1\)</span>. Show that <span class="math notranslate nohighlight">\(\theta_1x_1 + \dots + \theta_kx_k \in C\)</span>. (The definition of convexity is that this holds for <span class="math notranslate nohighlight">\(k = 2\)</span>; you must show it for arbitrary <span class="math notranslate nohighlight">\(k\)</span>.) Hint. Use induction on <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
 <p><em>Proof.</em></p>
@@ -361,7 +373,7 @@ document.write(`
 <p>Because <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}=1\)</span> and we assume the property is true for <span class="math notranslate nohighlight">\(k-1\)</span>, <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\in C\)</span> and it is a point inside <span class="math notranslate nohighlight">\(C\)</span>. We can view the above formula as the convex combination of two points <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\)</span>, which is inside the convex set <span class="math notranslate nohighlight">\(C\)</span>.</p>
 </section>
 <section id="exercise-2-2">
-<h2>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Link to this heading">#</a></h2>
+<h3>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Link to this heading">#</a></h3>
 <p>Show that a set is convex if and only if its intersection with any line is convex. Show that a set is affine if and only if its intersection with any line is affine.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -369,7 +381,7 @@ document.write(`
 <p>A line is a convex set, its intersection with another convex set is also convex. Conversely, suppose the intersection of a set with any line is convex, take any two distinctive points from the set, the intersection of the set with the line through the two points is convex. Therefore the convex combination of the two points belongs to the intersection and also belongs to the set. Hence the set is convex. The second part about affinity can be proved similarly.</p>
 </section>
 <section id="exercise-2-3">
-<h2>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Link to this heading">#</a></h2>
+<h3>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Link to this heading">#</a></h3>
 <p><em>Midpoint convexity</em>. A set <span class="math notranslate nohighlight">\(C\)</span> is midpoint convex if whenever two points <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> are in <span class="math notranslate nohighlight">\(C\)</span>, the average or midpoint <span class="math notranslate nohighlight">\((a + b)/2\)</span> is in <span class="math notranslate nohighlight">\(C\)</span>. Obviously a convex set is midpoint convex. It can be proved that under mild conditions midpoint convexity implies convexity. As a simple case, prove that if <span class="math notranslate nohighlight">\(C\)</span> is closed and midpoint convex, then <span class="math notranslate nohighlight">\(C\)</span> is convex.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -400,12 +412,12 @@ x_{i-1}\quad &amp;\text{otherwise}
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>A set is closed if and only if it contains its limit points.</p></li>
-<li><p>Rantional number set <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span> is midpoint convex but it is not convex since it is not a closed set.</p></li>
+<li><p>Rantional number set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is midpoint convex but it is not convex since it is not a closed set.</p></li>
 </ul>
 </div>
 </section>
 <section id="exercise-2-4">
-<h2>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Link to this heading">#</a></h2>
+<h3>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Link to this heading">#</a></h3>
 <p>Show that the convex hull of a set <span class="math notranslate nohighlight">\(S\)</span> is the intersection of all convex sets that contain <span class="math notranslate nohighlight">\(S\)</span>. (The same method can be used to show that the conic, or affine, or linear hull of a set <span class="math notranslate nohighlight">\(S\)</span> is the intersection of all conic sets, or affine sets, or subspaces that contain <span class="math notranslate nohighlight">\(S\)</span>.)</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -432,6 +444,77 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 <li><p>The linear hull (also called linear span) only requires the parameters <span class="math notranslate nohighlight">\(\theta_i\)</span> to be rational.</p></li>
 </ul>
 </div>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<section id="exercise-2-5">
+<h3>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Link to this heading">#</a></h3>
+<p>What is the distance between two parallel hyperplanes <span class="math notranslate nohighlight">\(\{x \in \mathbb{R}^n \mid a^Tx = b_1\}\)</span> and <span class="math notranslate nohighlight">\(\{x\in\mathbb{R}^n \mid a^Tx = b_2\}\)</span>?</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>The distance is <span class="math notranslate nohighlight">\(\frac{|b_1-b_2|}{||a||}\)</span>. (it is a distance between two point <span class="math notranslate nohighlight">\(\frac{b_1}{||a||^2}a\)</span> and <span class="math notranslate nohighlight">\(\frac{b_2}{||a||^2}a\)</span>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>the intersection point of the line <span class="math notranslate nohighlight">\(a^Tx=b\)</span> with its perpendicular line that though the origin is <span class="math notranslate nohighlight">\(\frac{b}{||a||^2}a\)</span>.</p></li>
+<li><p>For the line <span class="math notranslate nohighlight">\(a^Tx=b\)</span>, its direction vector is <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="exercise-2-6">
+<h3>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Link to this heading">#</a></h3>
+<p><em>When does one halfspace contain another?</em> Give conditions under which</p>
+<div class="math notranslate nohighlight">
+\[
+\{x \mid a^Tx \geq b\}\subseteq \{x\mid \tilde{a}^Tx\geq \tilde{b}\}
+\]</div>
+<p>(where <span class="math notranslate nohighlight">\(a \neq 0, \tilde{a} \neq 0\)</span>). Also find the conditions under which the two halfspaces are equal.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>The conditions are:</p>
+<ul class="simple">
+<li><p>if <span class="math notranslate nohighlight">\(\frac{a}{||a||}=\frac{\tilde{a}}{||\tilde{a}||}\)</span> and <span class="math notranslate nohighlight">\(\frac{b}{||a||}=\frac{\tilde{b}}{||\tilde{a}||}\)</span>, then the two halfspaces are equal.</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(\frac{a}{||a||}=\frac{\tilde{a}}{||\tilde{a}||}\)</span> and <span class="math notranslate nohighlight">\(\frac{b}{||a||}\geq\frac{\tilde{b}}{||\tilde{a}||}\)</span>, then the latter halfspaces contains the first halfspace.</p></li>
+</ul>
+</section>
+<section id="exercise-2-7">
+<h3>Exercise 2.7<a class="headerlink" href="#exercise-2-7" title="Link to this heading">#</a></h3>
+<p><em>Voronoi description of halfspace</em>. Let <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> be distinct points in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Show that the set of all points that are closer (in Euclidean norm) to <span class="math notranslate nohighlight">\(a\)</span> than <span class="math notranslate nohighlight">\(b\)</span>, i.e., <span class="math notranslate nohighlight">\(\{x \mid ||x−a||_2 \leq ||x−b||_2\}\)</span>, is a halfspace. Describe it explicitly as an inequality of the form <span class="math notranslate nohighlight">\(c^Tx\leq d\)</span>. Draw a picture.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+<p>Solution 1: the midpoint of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is <span class="math notranslate nohighlight">\((a+b)/2\)</span>, the hyperplane that is orthogonal to the vector <span class="math notranslate nohighlight">\(b-a\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+(b-a)^Tx=\frac{(b-a)^T(b+a)}{2}=\frac{b^Tb-a^Ta}{2}.
+\]</div>
+<p>So the halfspace is:</p>
+<div class="math notranslate nohighlight">
+\[
+(b-a)^Tx=\frac{(b-a)^T(b+a)}{2}\leq\frac{b^Tb-a^Ta}{2}.
+\]</div>
+<p>Solution 2:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+&amp;||x−a||_2 \leq ||x−b||_2\\
+\Longleftrightarrow&amp;~ (x-a)^T(x-a)\leq (x-b)^T(x-b)\\
+\Longleftrightarrow&amp;~ x^Tx-2x^Ta+a^Ta\leq x^Tx-2x^Tb+b^Tb\\
+\Longleftrightarrow&amp;~ 2(b-a)^Tx \leq b^Tb-a^Ta
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="exercise-2-8">
+<h3>Exercise 2.8<a class="headerlink" href="#exercise-2-8" title="Link to this heading">#</a></h3>
+<p>Which of the following sets <span class="math notranslate nohighlight">\(S\)</span> are polyhedra? If possible, express <span class="math notranslate nohighlight">\(S\)</span> in the form <span class="math notranslate nohighlight">\(S =\{x \mid Ax \preceq b, F x = g\}\)</span>.</p>
+<p>(a) <span class="math notranslate nohighlight">\(S = \{y_1a_1 + y_2a_2 \mid − 1 \leq y_1 \leq 1, − 1 \leq y_2 \leq 1\}\)</span>, where <span class="math notranslate nohighlight">\(a_1,a_2 \in\mathbb{R}^n\)</span>.</p>
+<p>(b) <span class="math notranslate nohighlight">\(S =\{x \in \mathbb{R}^n \mid x \succeq 0, \mathbf{1}^Tx = 1, \sum^n_{i=1}x_ia_i = b_1, \sum^n_{i=1} x_ia^2_i = b_2\}\)</span>, where
+<span class="math notranslate nohighlight">\(a_1, \dots, a_n\in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(b_1, b_2 \in \mathbb{R}\)</span>.</p>
+<p>(c) <span class="math notranslate nohighlight">\(S = \{x \in \mathbb{R}^n \mid x \succeq 0, x^Ty \leq 1\text{ for all }\)</span>y<span class="math notranslate nohighlight">\(\text{ with }||y||_2 = 1\}\)</span>.</p>
+<p>(d) <span class="math notranslate nohighlight">\(S = \{x ∈ \mathbb{R}^n \mid x \succeq 0, x^Ty \leq 1\text{ for all }y\text{ with }\sum_{i=1}^n |y_i| = 1\}\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution:</strong></p>
+</section>
 </section>
 </section>
 
@@ -490,10 +573,20 @@ x=\theta_1x_1+\dots+\theta_kx_k,
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defintion-of-convexity">Defintion of convexity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-1">Exercise 2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-2">Exercise 2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-3">Exercise 2.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-4">Exercise 2.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-5">Exercise 2.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-7">Exercise 2.7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-8">Exercise 2.8</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
