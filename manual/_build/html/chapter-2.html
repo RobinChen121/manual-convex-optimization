@@ -511,9 +511,42 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 <p>(b) <span class="math notranslate nohighlight">\(S =\{x \in \mathbb{R}^n \mid x \succeq 0, \mathbf{1}^Tx = 1, \sum^n_{i=1}x_ia_i = b_1, \sum^n_{i=1} x_ia^2_i = b_2\}\)</span>, where
 <span class="math notranslate nohighlight">\(a_1, \dots, a_n\in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(b_1, b_2 \in \mathbb{R}\)</span>.</p>
 <p>(c) <span class="math notranslate nohighlight">\(S = \{x \in \mathbb{R}^n \mid x \succeq 0, x^Ty \leq 1\text{ for all }\)</span>y<span class="math notranslate nohighlight">\(\text{ with }||y||_2 = 1\}\)</span>.</p>
-<p>(d) <span class="math notranslate nohighlight">\(S = \{x ∈ \mathbb{R}^n \mid x \succeq 0, x^Ty \leq 1\text{ for all }y\text{ with }\sum_{i=1}^n |y_i| = 1\}\)</span>.</p>
+<p>(d) <span class="math notranslate nohighlight">\(S = \{x ∈ \mathbb{R}^n \mid x \succeq 0, x^Ty \leq 1\text{ for all }\)</span>y<span class="math notranslate nohighlight">\(\text{ with }\sum_{i=1}^n |y_i| = 1\}\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
+<p>(a) <span class="math notranslate nohighlight">\(S\)</span> is a polyhedron. It is actually a parallelogram in which the corner points are <span class="math notranslate nohighlight">\(a_1+a_2\)</span>, <span class="math notranslate nohighlight">\(a_1-a_2\)</span>, <span class="math notranslate nohighlight">\(-a_1+a_2\)</span>, <span class="math notranslate nohighlight">\(-a_1-a_2\)</span>.</p>
+<p>Below we use Python to draw the parallelogram in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, in which <span class="math notranslate nohighlight">\(c_1\)</span> is orthogonal to <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> is orthogonal to <span class="math notranslate nohighlight">\(a_2\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;font.family&quot;</span><span class="p">:</span> <span class="s2">&quot;serif&quot;</span><span class="p">})</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">length_includes_head</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># a1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">13</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">length_includes_head</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># a2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">13</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$a_1$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$a_2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$c_2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$c_1$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">6.8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$S$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d838ff9ea4bc0432c5b3bab85a01cbd5779717930f1c9ae242ae106ba634762e.png" src="_images/d838ff9ea4bc0432c5b3bab85a01cbd5779717930f1c9ae242ae106ba634762e.png" />
+</div>
+</div>
+<p>Now let us express <span class="math notranslate nohighlight">\(S\)</span> by linear constraints.<span class="math notranslate nohighlight">\(S\)</span> is the intersection of several sets:</p>
+<p>(1) the plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span>.</p>
 </section>
 </section>
 </section>
