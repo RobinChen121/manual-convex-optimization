@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Chapter 2 &#8212; Manual of Introduction to Linear Optimization</title>
   
@@ -14,51 +15,54 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter-2';</script>
@@ -74,23 +78,19 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -112,20 +112,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,11 +132,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="intro.html">
-  
   
   
   
@@ -154,23 +144,12 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Manual of Introduction to Linear Optimization - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Manual of Introduction to Linear Optimization - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -197,7 +176,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -206,7 +185,7 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -288,22 +267,20 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -353,14 +330,14 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2">
-<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Link to this heading">#</a></h1>
+<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Permalink to this heading">#</a></h1>
 <section id="defintion-of-convexity">
-<h2>Defintion of convexity<a class="headerlink" href="#defintion-of-convexity" title="Link to this heading">#</a></h2>
+<h2>Defintion of convexity<a class="headerlink" href="#defintion-of-convexity" title="Permalink to this heading">#</a></h2>
 <section id="exercise-2-1">
-<h3>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(C \subset \mathbb{R}^n\)</span> be a convex set, with <span class="math notranslate nohighlight">\(x_1, \dots, x_k \in C\)</span>, and let <span class="math notranslate nohighlight">\(\theta_1, \dots, \theta_k \in \mathbb{R}\)</span> satisfy <span class="math notranslate nohighlight">\(\theta_i \geq 0, \theta_1 + \dots + \theta_k = 1\)</span>. Show that <span class="math notranslate nohighlight">\(\theta_1x_1 + \dots + \theta_kx_k \in C\)</span>. (The definition of convexity is that this holds for <span class="math notranslate nohighlight">\(k = 2\)</span>; you must show it for arbitrary <span class="math notranslate nohighlight">\(k\)</span>.) Hint. Use induction on <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -373,7 +350,7 @@ document.write(`
 <p>Because <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}=1\)</span> and we assume the property is true for <span class="math notranslate nohighlight">\(k-1\)</span>, <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\in C\)</span> and it is a point inside <span class="math notranslate nohighlight">\(C\)</span>. We can view the above formula as the convex combination of two points <span class="math notranslate nohighlight">\(x_k\)</span> and <span class="math notranslate nohighlight">\(\frac{\theta_1}{\theta_1+\dots+\theta_{k-1}}x_1+\dots+\frac{\theta_{k-1}}{\theta_1+\dots+\theta_{k-1}}x_{k-1}\)</span>, which is inside the convex set <span class="math notranslate nohighlight">\(C\)</span>.</p>
 </section>
 <section id="exercise-2-2">
-<h3>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this heading">#</a></h3>
 <p>Show that a set is convex if and only if its intersection with any line is convex. Show that a set is affine if and only if its intersection with any line is affine.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -381,7 +358,7 @@ document.write(`
 <p>A line is a convex set, its intersection with another convex set is also convex. Conversely, suppose the intersection of a set with any line is convex, take any two distinctive points from the set, the intersection of the set with the line through the two points is convex. Therefore the convex combination of the two points belongs to the intersection and also belongs to the set. Hence the set is convex. The second part about affinity can be proved similarly.</p>
 </section>
 <section id="exercise-2-3">
-<h3>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Permalink to this heading">#</a></h3>
 <p><em>Midpoint convexity</em>. A set <span class="math notranslate nohighlight">\(C\)</span> is midpoint convex if whenever two points <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> are in <span class="math notranslate nohighlight">\(C\)</span>, the average or midpoint <span class="math notranslate nohighlight">\((a + b)/2\)</span> is in <span class="math notranslate nohighlight">\(C\)</span>. Obviously a convex set is midpoint convex. It can be proved that under mild conditions midpoint convexity implies convexity. As a simple case, prove that if <span class="math notranslate nohighlight">\(C\)</span> is closed and midpoint convex, then <span class="math notranslate nohighlight">\(C\)</span> is convex.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -417,7 +394,7 @@ x_{i-1}\quad &amp;\text{otherwise}
 </div>
 </section>
 <section id="exercise-2-4">
-<h3>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this heading">#</a></h3>
 <p>Show that the convex hull of a set <span class="math notranslate nohighlight">\(S\)</span> is the intersection of all convex sets that contain <span class="math notranslate nohighlight">\(S\)</span>. (The same method can be used to show that the conic, or affine, or linear hull of a set <span class="math notranslate nohighlight">\(S\)</span> is the intersection of all conic sets, or affine sets, or subspaces that contain <span class="math notranslate nohighlight">\(S\)</span>.)</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -447,9 +424,9 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 </section>
 </section>
 <section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
 <section id="exercise-2-5">
-<h3>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.5<a class="headerlink" href="#exercise-2-5" title="Permalink to this heading">#</a></h3>
 <p>What is the distance between two parallel hyperplanes <span class="math notranslate nohighlight">\(\{x \in \mathbb{R}^n \mid a^Tx = b_1\}\)</span> and <span class="math notranslate nohighlight">\(\{x\in\mathbb{R}^n \mid a^Tx = b_2\}\)</span>?</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -463,7 +440,7 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 </div>
 </section>
 <section id="exercise-2-6">
-<h3>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.6<a class="headerlink" href="#exercise-2-6" title="Permalink to this heading">#</a></h3>
 <p><em>When does one halfspace contain another?</em> Give conditions under which</p>
 <div class="math notranslate nohighlight">
 \[
@@ -479,7 +456,7 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 </ul>
 </section>
 <section id="exercise-2-7">
-<h3>Exercise 2.7<a class="headerlink" href="#exercise-2-7" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.7<a class="headerlink" href="#exercise-2-7" title="Permalink to this heading">#</a></h3>
 <p><em>Voronoi description of halfspace</em>. Let <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> be distinct points in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Show that the set of all points that are closer (in Euclidean norm) to <span class="math notranslate nohighlight">\(a\)</span> than <span class="math notranslate nohighlight">\(b\)</span>, i.e., <span class="math notranslate nohighlight">\(\{x \mid ||x−a||_2 \leq ||x−b||_2\}\)</span>, is a halfspace. Describe it explicitly as an inequality of the form <span class="math notranslate nohighlight">\(c^Tx\leq d\)</span>. Draw a picture.</p>
 <hr class="docutils" />
 <p><strong>Solution:</strong></p>
@@ -505,7 +482,7 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 \end{split}\]</div>
 </section>
 <section id="exercise-2-8">
-<h3>Exercise 2.8<a class="headerlink" href="#exercise-2-8" title="Link to this heading">#</a></h3>
+<h3>Exercise 2.8<a class="headerlink" href="#exercise-2-8" title="Permalink to this heading">#</a></h3>
 <p>Which of the following sets <span class="math notranslate nohighlight">\(S\)</span> are polyhedra? If possible, express <span class="math notranslate nohighlight">\(S\)</span> in the form <span class="math notranslate nohighlight">\(S =\{x \mid Ax \preceq b, F x = g\}\)</span>.</p>
 <p>(a) <span class="math notranslate nohighlight">\(S = \{y_1a_1 + y_2a_2 \mid − 1 \leq y_1 \leq 1, − 1 \leq y_2 \leq 1\}\)</span>, where <span class="math notranslate nohighlight">\(a_1,a_2 \in\mathbb{R}^n\)</span>.</p>
 <p>(b) <span class="math notranslate nohighlight">\(S =\{x \in \mathbb{R}^n \mid x \succeq 0, \mathbf{1}^Tx = 1, \sum^n_{i=1}x_ia_i = b_1, \sum^n_{i=1} x_ia^2_i = b_2\}\)</span>, where
@@ -520,34 +497,55 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;font.family&quot;</span><span class="p">:</span> <span class="s2">&quot;serif&quot;</span><span class="p">})</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">length_includes_head</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># a1</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">13</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">length_includes_head</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># a2</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">13</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">13</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">13</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.06</span><span class="p">,</span> <span class="n">length_includes_head</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># a1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.06</span><span class="p">,</span> <span class="n">length_includes_head</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># a2</span>
+
 
 <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">patches</span><span class="o">.</span><span class="n">Polygon</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">]],</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$a_1$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$a_2$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$c_2$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$c_1$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">6.8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$S$&#39;</span><span class="p">)</span>
+<span class="c1"># plt.text(6.8, 6, r&#39;$S$&#39;)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="c1">#plt.axis(&#39;off&#39;)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d838ff9ea4bc0432c5b3bab85a01cbd5779717930f1c9ae242ae106ba634762e.png" src="_images/d838ff9ea4bc0432c5b3bab85a01cbd5779717930f1c9ae242ae106ba634762e.png" />
+<img alt="_images/aa8e20ebf5d348a728040a3cf89f932a724c05c169ddb21e561967156b0e9e0e.png" src="_images/aa8e20ebf5d348a728040a3cf89f932a724c05c169ddb21e561967156b0e9e0e.png" />
 </div>
 </div>
-<p>Now let us express <span class="math notranslate nohighlight">\(S\)</span> by linear constraints.<span class="math notranslate nohighlight">\(S\)</span> is the intersection of several sets:</p>
-<p>(1) the plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span>.</p>
-</section>
+<p>Now let us express <span class="math notranslate nohighlight">\(S\)</span> by linear constraints. <span class="math notranslate nohighlight">\(S\)</span> is an area that locates on the plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span> and between the four edges of the parreleogram. Let represent each one by linear constraints.</p>
+<p>The plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span>.</p>
+<script src="https://giscus.app/client.js"
+        data-repo="robinchen121/book-Python-Data-Science"
+        data-repo-id="R_kgDOKFdyOw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOKFdyO84CgWHi"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script></section>
 </section>
 </section>
 
@@ -576,10 +574,11 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 
               
               
-              
-              
-                <footer class="prev-next-footer d-print-none">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -590,7 +589,10 @@ x=\theta_1x_1+\dots+\theta_kx_k,
         <p class="prev-next-title">Overview</p>
       </div>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -598,7 +600,6 @@ x=\theta_1x_1+\dots+\theta_kx_k,
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -641,7 +642,6 @@ By Zhen Chen
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2023.
@@ -668,8 +668,8 @@ By Zhen Chen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
