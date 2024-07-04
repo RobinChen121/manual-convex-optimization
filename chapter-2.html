@@ -435,6 +435,7 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>the intersection point of the line <span class="math notranslate nohighlight">\(a^Tx=b\)</span> with its perpendicular line that though the origin is <span class="math notranslate nohighlight">\(\frac{b}{||a||^2}a\)</span>.</p></li>
+<li><p>the distance between the line <span class="math notranslate nohighlight">\(a^Tx=b\)</span> and a point <span class="math notranslate nohighlight">\(x_0\)</span> is <span class="math notranslate nohighlight">\(\frac{|b-a^Tx_0|}{||a||}\)</span></p></li>
 <li><p>For the line <span class="math notranslate nohighlight">\(a^Tx=b\)</span>, its direction vector is <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
 </ul>
 </div>
@@ -530,7 +531,88 @@ x=\theta_1x_1+\dots+\theta_kx_k,
 </div>
 </div>
 <p>Now let us express <span class="math notranslate nohighlight">\(S\)</span> by linear constraints. <span class="math notranslate nohighlight">\(S\)</span> is an area that locates on the plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span> and between the four edges of the parreleogram. Let represent each one by linear constraints.</p>
-<p>The plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span>.</p>
+<p>The plane formulated by <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span>. Let <span class="math notranslate nohighlight">\(v_i (i=1,\dots, n-2)\)</span> as the vectors that are orthogonal to <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span> and are independent with each other. The plane can be expressed by the following constraints:</p>
+<div class="math notranslate nohighlight">
+\[
+v_ix=0,\quad i=1,\dots, n-2 \tag(1)
+\]</div>
+<p>Next, we need additional constraints to express the paralleleogram in a plane. To do so, we first find two vectors that are orthogonal to <span class="math notranslate nohighlight">\(a_1\)</span> and <span class="math notranslate nohighlight">\(a_2\)</span>, respectively. We can achieve this by Schmidt orthogonalization. <span class="math notranslate nohighlight">\(c_1\)</span> is orthogonal to <span class="math notranslate nohighlight">\(a_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+c_1=a_2-\frac{a_1^Ta_2}{||a_1||^2} a_1
+\]</div>
+<p><span class="math notranslate nohighlight">\(c_2\)</span> is orthogonal to <span class="math notranslate nohighlight">\(a_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+c_2=a_1-\frac{a_2^Ta_1}{||a_2||^2} a_2
+\]</div>
+<p>According to the property of paralleogram, the points lying in the paralleogram should satisfy:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+-|c_1^Ta_2|\leq c_1^Tx\leq |c_1^Ta_2|\tag{2}\\
+-|c_2^Ta_1|\leq c_2^Tx\leq |c_2^Ta_1|\tag{3}
+\end{align}
+\end{split}\]</div>
+<p>Based on (1),(2),(3), we can express <span class="math notranslate nohighlight">\(S\)</span> as the following:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+v_ix&amp;=0,\quad i=1,\dots, n-2\\
+c_1^Tx&amp;\leq |c_1^Ta_2|\\
+-c_1^Tx&amp;\leq |c_1^Ta_2|\\
+c_2^Tx&amp;\leq |c_2^Ta_1|\\
+-c_2^Tx&amp;\leq |c_2^Ta_1|
+\end{align}
+\end{split}\]</div>
+<p>(2) Yes. <span class="math notranslate nohighlight">\(S\)</span> can be express in the following:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\begin{bmatrix}
+1 &amp; 1 &amp;\dots &amp; 1\\
+a_1 &amp; a_2 &amp; \dots &amp;a_n\\
+a_1^2 &amp; a_2^2 &amp; \dots &amp;a_n^2
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+\vdots\\
+x_n
+\end{bmatrix}
+&amp;=
+\begin{bmatrix}
+1\\
+b_1\\
+b_2
+\end{bmatrix},\\
+-x_i&amp;\leq 0.\quad i=1,\dots,n
+\end{align}
+\end{split}\]</div>
+<p>(3) no. Since <span class="math notranslate nohighlight">\(x^Ty\leq 1\)</span> for all <span class="math notranslate nohighlight">\(y\)</span>, it must be less than 1 for <span class="math notranslate nohighlight">\(y=x\)</span>, hence</p>
+<div class="math notranslate nohighlight">
+\[
+x^Tx=||x||^2\leq 1.
+\]</div>
+<p>On the other hand, if <span class="math notranslate nohighlight">\(||x||^2\leq 1\)</span> when <span class="math notranslate nohighlight">\(||y||_2=1\)</span>, acoording to Cauchy-Schwarz inequality,</p>
+<div class="math notranslate nohighlight">
+\[
+x^Ty\leq \|x\|\|y\|=1.
+\]</div>
+<p>Therefore, the set <span class="math notranslate nohighlight">\(S\)</span> equals <span class="math notranslate nohighlight">\(\{x\in\mathbb{R}^n\mid x\succeq 0, \|x\|\leq 1\}\)</span>. It is the intersection of infinite halfspaces (when <span class="math notranslate nohighlight">\(n=2\)</span>, it is shown by the following figure). From the definition of polyhedron, a polyhedron should be the intersection of <strong>finite</strong> hyperplanes or halfspaces.</p>
+<p><img alt="circle.png" src="_images/2-1.png" /></p>
+<p>(4) yes. The set <span class="math notranslate nohighlight">\(S\)</span> is equivalent to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+|x_i|\leq 1\quad i=1,\dots,n\\
+x_i\geq 0\quad i=1,\dots,n
+\end{split}\]</div>
+<p>To prove it, firstly since <span class="math notranslate nohighlight">\(x^Ty\leq 1\)</span> for all <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(\sum |y_i|=1\)</span>, we can select <span class="math notranslate nohighlight">\(y\)</span> that one elment <span class="math notranslate nohighlight">\(y_i=1\)</span> or <span class="math notranslate nohighlight">\(y_i=-1\)</span> and other elements are all 0,  this leads to <span class="math notranslate nohighlight">\(|x_i|\leq 1, i=1,\dots,n\)</span>.</p>
+<p>Secondly, if <span class="math notranslate nohighlight">\(|x_i|\leq 1,i=1,\dots,n\)</span>, <span class="math notranslate nohighlight">\(x^Ty\leq \sum|x_i||y_i|\leq \sum |y_i|=1\)</span> with <span class="math notranslate nohighlight">\(\sum |y_i|=1\)</span>. Therefore, <span class="math notranslate nohighlight">\(S=\{x\mid x_i\geq 0,|x_i|\leq 1.\quad i=1,\dots,n\}\)</span>. It can also be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+-x_i\leq 0,\quad i=1,\dots,n\\
+-x_i\leq 1,\quad i=1,\dots,n
+\end{split}\]</div>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
