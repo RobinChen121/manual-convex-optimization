@@ -307,7 +307,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="overview">
+  <!-- Toogle google translation -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en',
+                  includedLanguages: 'zh-CN,zh-TW,en,ja,ko,de,ru,fr,es,it,pt,hi,ar',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+      }
+</script>
+<script type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+<br>
+<section class="tex2jax_ignore mathjax_ignore" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
 <p>This is my exercise book for the exercises in the book <code class="docutils literal notranslate"><span class="pre">Convex</span> <span class="pre">Optimization</span></code> (Boyd, Stephen P., and Lieven Vandenberghe. Cambridge university press, 2004).</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/cover.jpg"><img alt="cover" class="bg-primary mb-1 align-center" src="_images/cover.jpg" style="width: 400px; height: 600px;" /></a>

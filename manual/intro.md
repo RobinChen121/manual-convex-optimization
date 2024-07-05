@@ -1,3 +1,18 @@
+<!-- Toogle google translation -->
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en',
+                  includedLanguages: 'zh-CN,zh-TW,en,ja,ko,de,ru,fr,es,it,pt,hi,ar',
+layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+      }
+</script>
+<script type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
+<br>
+
 # Overview
 
 This is my exercise book for the exercises in the book `Convex Optimization` (Boyd, Stephen P., and Lieven Vandenberghe. Cambridge university press, 2004). 
