@@ -319,8 +319,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-7">Exercise 2.7</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-8">Exercise 2.8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-9">Exercise 2.9</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">solution:</a></li>
 </ul>
             </nav>
         </div>
@@ -334,10 +336,47 @@ document.write(`
                   
   <!-- Toogle google translation -->
 <div id="google_translate_element"></div>
+<style>    
+.goog-te-gadget {
+  font-family: Roboto, "Open Sans", sans-serif !important;
+  text-transform: uppercase;
+}
+.goog-te-gadget-simple {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(237, 230, 230, 0.5) !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
+  display: inline-block;
+  cursor: pointer;
+  zoom: 1;
+}
+
+.goog-te-gadget-icon {
+  background-image: url(https://placehold.it/32) !important;
+  background-position: 0px 0px;
+  height: 0px !important;
+  width: 0px !important;
+  margin-right: 8px !important;
+  display: none;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+    display: none; // add !important if required 
+  }
+    
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+body {
+    top: 0px !important; 
+    }
+</style>
 <script type="text/javascript">
       function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en',
-                  includedLanguages: 'zh-CN,zh-TW,en,ja,ko,de,ru,fr,es,it,pt,hi,ar',
+        new google.translate.TranslateElement({ pageLanguage: 'zh-CN',
+                  includedLanguages: 'en,zh-CN,zh-TW,ja,ko,de,ru,fr,es,it,pt,hi,ar',
 layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
       }
 </script>
@@ -625,6 +664,44 @@ x_i\geq 0\quad i=1,\dots,n
 -x_i\leq 0,\quad i=1,\dots,n\\
 -x_i\leq 1,\quad i=1,\dots,n
 \end{split}\]</div>
+</section>
+<section id="exercise-2-9">
+<h3>Exercise 2.9<a class="headerlink" href="#exercise-2-9" title="Permalink to this heading">#</a></h3>
+<p><em>Voronoi sets and polyhedral decomposition</em>. Let <span class="math notranslate nohighlight">\(x_0, \dots, x_K \in \mathbb{R}^n\)</span>. Consider the set of points that are closer (in Euclidean norm) to <span class="math notranslate nohighlight">\(x_0\)</span> than the other <span class="math notranslate nohighlight">\(x_i\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[
+V = \{x \in \mathcal{R}^n \mid \|x − x_0\|_2 \leq \|x − x_i\|_2, i = 1, \dots, K\}.
+\]</div>
+<p><span class="math notranslate nohighlight">\(V\)</span> is called the Voronoi region around <span class="math notranslate nohighlight">\(x_0\)</span> with respect to <span class="math notranslate nohighlight">\(x_1, \dots, x_K\)</span>.</p>
+<p>(a) Show that <span class="math notranslate nohighlight">\(V\)</span> is a polyhedron. Express <span class="math notranslate nohighlight">\(V\)</span> in the form <span class="math notranslate nohighlight">\(V = \{x \mid Ax \preceq b\}\)</span>.</p>
+<p>(b) Conversely, given a polyhedron <span class="math notranslate nohighlight">\(P\)</span> with nonempty interior, show how to find <span class="math notranslate nohighlight">\(x_0, \dots, x_K\)</span> so that the polyhedron is the Voronoi region of <span class="math notranslate nohighlight">\(x_0\)</span> with respect to <span class="math notranslate nohighlight">\(x_1, \dots, x_K\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="solution">
+<h2>solution:<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
+<p>(a) This is similar to Exercise 2.7. The set that is closer to <span class="math notranslate nohighlight">\(x_0\)</span> than another point <span class="math notranslate nohighlight">\(x_0\)</span> can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+2(x_i-x_0)^Tx\leq x_i^Tx_i-x_0^Tx_0
+\]</div>
+<p><span class="math notranslate nohighlight">\(V\)</span> is the intersection of them. Hence, <span class="math notranslate nohighlight">\(V\)</span> can be expressed as: <span class="math notranslate nohighlight">\(V=\{x\mid A\preceq b\}\)</span>, in which:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\begin{bmatrix}
+2(x_1-x_0)^T\\
+\vdots\\
+2(x_K-x_0)^T
+\end{bmatrix},
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+b=\begin{bmatrix}
+x_1^Tx_i-x_0^Tx_0\\
+\vdots\\
+x_K^Tx_K-x_0^Tx_0
+\end{bmatrix}
+\end{split}\]</div>
 <script src="https://giscus.app/client.js"
         data-repo="robinchen121/book-Python-Data-Science"
         data-repo-id="R_kgDOKFdyOw"
@@ -640,7 +717,6 @@ x_i\geq 0\quad i=1,\dots,n
         crossorigin="anonymous"
         async>
 </script></section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -713,8 +789,10 @@ x_i\geq 0\quad i=1,\dots,n
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-6">Exercise 2.6</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-7">Exercise 2.7</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-8">Exercise 2.8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-9">Exercise 2.9</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">solution:</a></li>
 </ul>
   </nav></div>
 
